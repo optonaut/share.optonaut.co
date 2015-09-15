@@ -12,6 +12,8 @@ test:
     - echo "No tests yet"
 
 deployment:
-  override:
-    - docker pull schickling/s3cmd
-    - docker run schickling/s3cmd --access_key=$S3_KEY --secret_key=$S3_SECRET --force --delete-removed --acl-public sync . s3://$S3_BUCKET
+  production:
+    branch: master
+    commands:
+      - docker pull schickling/s3cmd
+      - docker run schickling/s3cmd --access_key=$S3_KEY --secret_key=$S3_SECRET --force --delete-removed --acl-public sync . s3://$S3_BUCKET
