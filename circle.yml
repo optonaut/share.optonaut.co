@@ -14,10 +14,4 @@ deployment:
   production:
     branch: master
     commands:
-      - docker run -v $(pwd)/build:/s3 schickling/s3cmd \
-        --access_key=$S3_KEY \
-        --secret_key=$S3_SECRET \
-        --skip-existing \
-        --force \
-        --acl-public \
-        sync . s3://$S3_BUCKET
+      - docker run -v $(pwd)/build:/s3 schickling/s3cmd --access_key=$S3_KEY --secret_key=$S3_SECRET --skip-existing --force --acl-public sync . s3://$S3_BUCKET
