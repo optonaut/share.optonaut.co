@@ -4,6 +4,9 @@
   "description": "Small proxy web application to share Optographs as HTTP URLs",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm install",
+    "test": "echo 'No tests so far'",
+    "prebuild": "npm install",
     "build": "webpack -p",
     "prestart": "npm install",
     "start": "webpack-dev-server --hot --inline --history-api-fallback --devtool source-map --host 0.0.0.0 --port 8840"
