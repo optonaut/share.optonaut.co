@@ -22,6 +22,7 @@
   "homepage": "https://github.com/optonaut/share.optonaut.co#readme",
   "dependencies": {
     "bowser": "^1.0.0",
+    "normalize.css": "^3.0.3",
     "react": "^0.13.3"
   },
   "devDependencies": {

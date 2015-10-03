@@ -1,0 +1,113 @@
+@import "~normalize.css/normalize.css";
+
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: normal;
+  src: url("http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: bold;
+  src: url("http://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2");
+}
+
+$information-phone: "only screen and (max-width : 400px)";
+$accent-color: #EF4836;
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: $accent-color;
+  color: #fff;
+  font-family: "San Francisco", "Helvetica Neue";
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+strong {
+  font-weight: normal;
+}
+
+*::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #fff;
+    opacity: 0.5;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #fff;
+    opacity: 0.5;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 0.5;
+}
+
+#content {
+  width: 90%;
+  max-width: 500px;
+
+  h1 {
+    font-weight: 100;
+    margin-top: 1em;
+  }
+
+  a {
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
+  div {
+    background-image: url('http://optonaut-ios-beta-production.s3.amazonaws.com/original/4c428fda-451b-4d19-9e6a-02109cc98b1d.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 3em auto;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

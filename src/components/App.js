@@ -13,8 +13,15 @@ export default class App extends React.Component {
   }
 
   render() {
+    const size = Math.min(Math.min(window.innerWidth, window.innerHeight), 500) * 0.8;
     return (
-      <h1>Optonaut</h1>
+      <div id='content'>
+        <h1>Hackzürich 15</h1>
+        <p>See in VR using the <a href='http://optonaut.co/'>Optonaut iOS App</a></p>
+        <div style={{width: size, height: size}}>
+          <a href='http://optonaut.co/' />
+        </div>
+      </div>
     );
   }
 }
