@@ -13,7 +13,7 @@ function checkStatus(response) {
   }
 }
 
-const baseAPI = 'https://api-v6-production.optonaut.co/';
+const baseAPI = 'https://api-v7-production.optonaut.co/public/';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     const uuid = window.location.pathname.split('/')[1];
-    fetch(`${baseAPI}optographs/${uuid}/public`)
+    fetch(`${baseAPI}optographs/${uuid}`)
       .then(checkStatus)
       .then(response => response.json())
       .then(this._handleReponse.bind(this));
