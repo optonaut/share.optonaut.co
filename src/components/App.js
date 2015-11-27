@@ -13,14 +13,10 @@ function checkStatus(response) {
   }
 }
 
-const baseAPI = 'https://api-v8-production.optonaut.co/';
+const baseAPI = 'https://api-v8-production.optonaut.co';
 
 export default class App extends React.Component {
   constructor(props) {
-    if (iphone) {
-      const uuid = window.location.pathname.split('/')[1];
-      window.location.replace(`optonaut://optographs/${uuid}`);
-    }
 
     super(props);
 
@@ -31,14 +27,19 @@ export default class App extends React.Component {
   }
 
   componentWillMount() {
-    const uuid = window.location.pathname.split('/')[1];
-    fetch(`${baseAPI}optographs/${uuid}/public`)
+    const alias = window.location.pathname.split('/')[1];
+    fetch(`${baseAPI}/public/optographs/alias/${alias}`)
       .then(checkStatus)
       .then(response => response.json())
       .then(this._handleReponse.bind(this));
   }
 
   _handleReponse(json) {
+    
+    if (iphone) {
+      window.location.replace(`optonaut://optographs/${json.id}`);
+    }
+    
     this.setState({
       previewAssetID: json.preview_asset_id,
       location: json.location.text + ', ' + json.location.country,
