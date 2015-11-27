@@ -13,7 +13,7 @@ function checkStatus(response) {
   }
 }
 
-const baseAPI = 'https://api-v6-production.optonaut.co/';
+const baseAPI = 'https://api-v8-production.optonaut.co/';
 
 export default class App extends React.Component {
   constructor(props) {
